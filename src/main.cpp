@@ -3,10 +3,13 @@
 #include <sstream>
 #include <zconf.h>
 #include <unistd.h>
+#include <cstdlib>
+#include <math.h>
 #include "../include/AEntity.hpp"
 #include "../include/Player.hpp"
 #include "../include/game.h"
 #include "../include/EnimyLite.hpp"
+#include "../include/EnimyWide.hpp"
 
 #define MAPX 64
 #define MAPY 27
@@ -26,7 +29,15 @@ void draw() {
 	box(g_win, 0, 0);
 	box(g_scr, 0, 0);
 	for (int x = 0; x < g_count; ++x) {
-		mvwaddch(g_win, g_obj[x]->getYLoc() + 1, g_obj[x]->getXLoc() + 1, g_obj[x]->getSymbol());
+		int width = g_obj[x]->getWidth();
+		if (width > 1){
+			for (int i = 0; i < width; ++i) {
+				mvwaddch(g_win, g_obj[x]->getYLoc() + 1, g_obj[x]->getXLoc() + 1 + i, g_obj[x]->getSymbol());
+			}
+		}
+		else {
+			mvwaddch(g_win, g_obj[x]->getYLoc() + 1, g_obj[x]->getXLoc() + 1, g_obj[x]->getSymbol());
+		}
 	}
 	wrefresh(g_win);
 }
@@ -113,11 +124,35 @@ void update() {
 					j = (j - 1) < 0 ? 0 : j - 1;
 				}
 			}
+			if (g_obj[i]->getWidth() > 1){
+				int width = g_obj[i]->getWidth() + 1;
+				for (int k = 1; k < width; ++k) {
+					for (int l = i + 1; l < g_count; ++l) {
+						if (g_obj[i]->getYLoc() == g_obj[l]->getYLoc() && g_obj[i]->getXLoc() + k == g_obj[l]->getXLoc()) {
+							if (g_obj[i]->takeDamage() <= 0) {
+								removeObj(i);
+								if (i == 0) {
+									g_loop = false;
+								}
+								l = (l - 1) < 0 ? 0 : l - 1;
+								i = (i - 1) < 0 ? 0 : i - 1;
+							}
+							if (g_obj[l]->takeDamage() <= 0) {
+								removeObj(l);
+								l = (l - 1) < 0 ? 0 : l - 1;
+							}
+						}
+					}
+				}
+			}
 		}
 	}
 	//srand((unsigned int) time(NULL));
 	if (g_count < MAXOBJ && g_shipCount < MAXSHIP && g_loop && (rand() % SPAWNCHANCE + 1) == 1) {
-		g_obj[g_count++] = g_ship[g_shipCount++] = new EnimyLite((rand() % MAPX), 0);
+		if(rand() % 4 == 1){
+			g_obj[g_count++] = g_ship[g_shipCount++] = new EnimyWide((rand() % MAPX - 3), 0);
+		}else
+			g_obj[g_count++] = g_ship[g_shipCount++] = new EnimyLite((rand() % MAPX), 0);
 	}
 	g_actions = 0;
 }
@@ -142,6 +177,7 @@ void gameLoop() {
 		getKey();
 		if (g_loop) {
 			time(&now);
+			g_player->addToScore((fmod(difftime(now, start), 20) == 0) ? 1 : 0);
 			mvwprintw(g_scr, 1, 1, "score: %d, lives: %d, sec : %f", g_player->getScore(), g_player->getLives(),
 			          difftime(now, start));
 		}

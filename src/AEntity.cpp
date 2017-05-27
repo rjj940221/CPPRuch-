@@ -59,8 +59,10 @@ int AEntity::getYLoc() const {
 bool AEntity::update(int mx, int my) {
 	xLoc += xVolocity;
 	yLoc += yVolocity;
-
-	return (xLoc > -1 && xLoc < mx && yLoc > -1 && yLoc < my);
+	if (width > 1) {
+		return (xLoc > -1 && xLoc + width < mx && yLoc > -1 && yLoc < my);
+	} else
+		return (xLoc > -1 && xLoc < mx && yLoc > -1 && yLoc < my);
 }
 
 void AEntity::setXVolocity(int xVolocity) {

@@ -6,9 +6,9 @@
 #include "../include/Player.hpp"
 #include "../include/Bullet.hpp"
 
-Player::Player() : AEntity('^', 3), AShip(0), score(0) {}
+Player::Player() : AEntity('^', 3, 1), AShip(0), score(0) {}
 
-Player::Player(Player const &plr) : AEntity('^', 3), AShip(0), score(0) {
+Player::Player(Player const &plr) : AEntity('^', 3, 1), AShip(0), score(0) {
 	*this = plr;
 }
 
@@ -22,6 +22,11 @@ Player::~Player(void) {
 
 int Player::getScore() const {
 	return score;
+}
+
+void Player::addToScore(int amount)
+{
+	score += amount;
 }
 
 void Player::moveLeft() {
