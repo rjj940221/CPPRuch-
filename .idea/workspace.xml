@@ -12,28 +12,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ff0a198e-cc47-4657-9861-ed393736ecba" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rush00_rojones_.dir/src/AEntity.cpp.o" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rush00_rojones_.dir/src/AEntity.cpp.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rush00_rojones_.dir/src/Bullet.cpp.o" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rush00_rojones_.dir/src/Bullet.cpp.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rush00_rojones_.dir/src/EnimyLite.cpp.o" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rush00_rojones_.dir/src/EnimyLite.cpp.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rush00_rojones_.dir/src/Player.cpp.o" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rush00_rojones_.dir/src/Player.cpp.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rush00_rojones_.dir/src/Ship.cpp.o" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rush00_rojones_.dir/src/Ship.cpp.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rush00_rojones_.dir/src/WallLight.cpp.o" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rush00_rojones_.dir/src/WallLight.cpp.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rush00_rojones_.dir/src/main.cpp.o" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rush00_rojones_.dir/src/main.cpp.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/rush00_rojones_" afterPath="$PROJECT_DIR$/cmake-build-debug/rush00_rojones_" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ft_retro" afterPath="$PROJECT_DIR$/ft_retro" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ft_retro.dSYM/Contents/Resources/DWARF/ft_retro" afterPath="$PROJECT_DIR$/ft_retro.dSYM/Contents/Resources/DWARF/ft_retro" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/include/EnimyWide.hpp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/EnimyWide.cpp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rush00_rojones_.dir/CXX.includecache" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rush00_rojones_.dir/CXX.includecache" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CMakeLists.txt" afterPath="$PROJECT_DIR$/CMakeLists.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rush00_rojones_.dir/DependInfo.cmake" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rush00_rojones_.dir/DependInfo.cmake" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rush00_rojones_.dir/build.make" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rush00_rojones_.dir/build.make" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rush00_rojones_.dir/cmake_clean.cmake" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rush00_rojones_.dir/cmake_clean.cmake" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rush00_rojones_.dir/link.txt" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rush00_rojones_.dir/link.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rush00_rojones_.dir/progress.make" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rush00_rojones_.dir/progress.make" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/Makefile" afterPath="$PROJECT_DIR$/cmake-build-debug/Makefile" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/rush00_rojones_.cbp" afterPath="$PROJECT_DIR$/cmake-build-debug/rush00_rojones_.cbp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/include/AEntity.hpp" afterPath="$PROJECT_DIR$/include/AEntity.hpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/include/Bullet.hpp" afterPath="$PROJECT_DIR$/include/Bullet.hpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/include/EnimyLite.hpp" afterPath="$PROJECT_DIR$/include/EnimyLite.hpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/include/Ship.hpp" afterPath="$PROJECT_DIR$/include/Ship.hpp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AEntity.cpp" afterPath="$PROJECT_DIR$/src/AEntity.cpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Bullet.cpp" afterPath="$PROJECT_DIR$/src/Bullet.cpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/EnimyLite.cpp" afterPath="$PROJECT_DIR$/src/EnimyLite.cpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Player.cpp" afterPath="$PROJECT_DIR$/src/Player.cpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Ship.cpp" afterPath="$PROJECT_DIR$/src/Ship.cpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main.cpp" afterPath="$PROJECT_DIR$/src/main.cpp" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -106,11 +99,11 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="EnimyLite.cpp" pinned="false" current-in-tab="true">
+          <file leaf-file-name="EnimyLite.cpp" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/EnimyLite.cpp">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="201">
-                  <caret line="17" column="28" lean-forward="false" selection-start-line="17" selection-start-column="28" selection-end-line="17" selection-end-column="28" />
+                <state relative-caret-position="66">
+                  <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="35" selection-end-column="1" />
                   <folding>
                     <element signature="e#49#67#0" expanded="true" />
                   </folding>
@@ -121,22 +114,34 @@
           <file leaf-file-name="AEntity.cpp" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/AEntity.cpp">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="495">
-                  <caret line="54" column="0" lean-forward="false" selection-start-line="54" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
+                <state relative-caret-position="368">
+                  <caret line="42" column="98" lean-forward="false" selection-start-line="42" selection-start-column="98" selection-end-line="42" selection-end-column="98" />
                   <folding>
                     <element signature="e#49#66#0" expanded="true" />
-                    <element signature="e#287#588#0" expanded="false" />
-                    <element signature="e#590#638#0" expanded="false" />
-                    <element signature="e#781#835#0" expanded="false" />
-                    <element signature="e#837#891#0" expanded="false" />
-                    <element signature="e#893#947#0" expanded="false" />
-                    <element signature="e#1092#1170#0" expanded="false" />
-                    <element signature="e#1172#1237#0" expanded="false" />
-                    <element signature="e#1239#1297#0" expanded="false" />
-                    <element signature="e#1299#1357#0" expanded="false" />
-                    <element signature="e#1359#1383#0" expanded="false" />
-                    <element signature="e#1385#1465#0" expanded="false" />
-                    <marker date="1495896761296" expanded="false" signature="671:690" ph="{...}" />
+                    <element signature="e#618#919#0" expanded="false" />
+                    <element signature="e#921#969#0" expanded="false" />
+                    <element signature="e#1236#1290#0" expanded="false" />
+                    <element signature="e#1292#1346#0" expanded="false" />
+                    <element signature="e#1348#1402#0" expanded="false" />
+                    <element signature="e#1547#1625#0" expanded="false" />
+                    <element signature="e#1627#1692#0" expanded="false" />
+                    <element signature="e#1694#1752#0" expanded="false" />
+                    <element signature="e#1754#1812#0" expanded="false" />
+                    <element signature="e#1814#1838#0" expanded="false" />
+                    <element signature="e#1840#1920#0" expanded="false" />
+                    <marker date="1495898222603" expanded="false" signature="1002:1021" ph="{...}" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="EnimyWide.cpp" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/src/EnimyWide.cpp">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="81">
+                  <caret line="8" column="67" lean-forward="false" selection-start-line="8" selection-start-column="67" selection-end-line="8" selection-end-column="67" />
+                  <folding>
+                    <element signature="e#49#84#0" expanded="true" />
                   </folding>
                 </state>
               </provider>
@@ -149,8 +154,18 @@
           <file leaf-file-name="AEntity.hpp" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/include/AEntity.hpp">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="254">
-                  <caret line="19" column="4" lean-forward="false" selection-start-line="19" selection-start-column="4" selection-end-line="19" selection-end-column="4" />
+                <state relative-caret-position="155">
+                  <caret line="31" column="35" lean-forward="false" selection-start-line="31" selection-start-column="35" selection-end-line="31" selection-end-column="35" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="EnimyWide.hpp" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/include/EnimyWide.hpp">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="285">
+                  <caret line="19" column="14" lean-forward="false" selection-start-line="19" selection-start-column="5" selection-end-line="19" selection-end-column="14" />
                   <folding />
                 </state>
               </provider>
@@ -159,10 +174,10 @@
           <file leaf-file-name="EnimyLite.hpp" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/include/EnimyLite.hpp">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="315">
-                  <caret line="21" column="30" lean-forward="false" selection-start-line="21" selection-start-column="30" selection-end-line="21" selection-end-column="30" />
+                <state relative-caret-position="165">
+                  <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="23" selection-end-column="2" />
                   <folding>
-                    <element signature="e#125#147#0" expanded="true" />
+                    <element signature="e#95#117#0" expanded="true" />
                   </folding>
                 </state>
               </provider>
@@ -178,7 +193,7 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="Bullet.hpp" pinned="false" current-in-tab="true">
+          <file leaf-file-name="Bullet.hpp" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/include/Bullet.hpp">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="240">
@@ -192,7 +207,7 @@
             <entry file="file://$PROJECT_DIR$/include/Ship.hpp">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="270">
-                  <caret line="18" column="30" lean-forward="true" selection-start-line="18" selection-start-column="30" selection-end-line="18" selection-end-column="30" />
+                  <caret line="18" column="30" lean-forward="false" selection-start-line="18" selection-start-column="30" selection-end-line="18" selection-end-column="30" />
                   <folding />
                 </state>
               </provider>
@@ -217,6 +232,9 @@
       <find>foo</find>
       <find>yl</find>
     </findStrings>
+    <replaceStrings>
+      <replace>EnimyWide</replace>
+    </replaceStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -236,14 +254,16 @@
         <option value="$PROJECT_DIR$/include/Player.hpp" />
         <option value="$PROJECT_DIR$/include/Bullet.hpp" />
         <option value="$PROJECT_DIR$/src/Bullet.cpp" />
-        <option value="$PROJECT_DIR$/include/EnimyLite.hpp" />
         <option value="$PROJECT_DIR$/include/Ship.hpp" />
         <option value="$PROJECT_DIR$/src/Ship.cpp" />
-        <option value="$PROJECT_DIR$/include/AEntity.hpp" />
         <option value="$PROJECT_DIR$/src/Player.cpp" />
-        <option value="$PROJECT_DIR$/src/AEntity.cpp" />
         <option value="$PROJECT_DIR$/src/main.cpp" />
         <option value="$PROJECT_DIR$/src/EnimyLite.cpp" />
+        <option value="$PROJECT_DIR$/src/AEntity.cpp" />
+        <option value="$PROJECT_DIR$/include/AEntity.hpp" />
+        <option value="$PROJECT_DIR$/include/EnimyLite.hpp" />
+        <option value="$PROJECT_DIR$/include/EnimyWide.hpp" />
+        <option value="$PROJECT_DIR$/src/EnimyWide.cpp" />
       </list>
     </option>
   </component>
@@ -537,17 +557,18 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1495830736483</updated>
-      <workItem from="1495830738313" duration="44971000" />
+      <workItem from="1495830738313" duration="45657000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="44971000" />
+    <option name="totallyTimeSpent" value="45657000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1920" height="1080" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.099574015" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.099574015" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3292683" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="CMake" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3292683" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -555,7 +576,7 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3292683" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.38922763" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.38922763" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39939025" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -615,12 +636,12 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
           <url>file://$PROJECT_DIR$/src/AEntity.cpp</url>
-          <line>54</line>
+          <line>59</line>
           <option name="timeStamp" value="15" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
           <url>file://$PROJECT_DIR$/src/AEntity.cpp</url>
-          <line>69</line>
+          <line>74</line>
           <option name="timeStamp" value="19" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
@@ -698,28 +719,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/include/EnimyLite.hpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="21" column="30" lean-forward="false" selection-start-line="21" selection-start-column="30" selection-end-line="21" selection-end-column="30" />
-          <folding>
-            <element signature="e#125#147#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/include/Player.hpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
           <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/include/AEntity.hpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="254">
-          <caret line="19" column="4" lean-forward="false" selection-start-line="19" selection-start-column="4" selection-end-line="19" selection-end-column="4" />
           <folding />
         </state>
       </provider>
@@ -737,30 +740,8 @@
     <entry file="file://$PROJECT_DIR$/include/Ship.hpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
-          <caret line="18" column="30" lean-forward="true" selection-start-line="18" selection-start-column="30" selection-end-line="18" selection-end-column="30" />
+          <caret line="18" column="30" lean-forward="false" selection-start-line="18" selection-start-column="30" selection-end-line="18" selection-end-column="30" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/AEntity.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="495">
-          <caret line="54" column="0" lean-forward="false" selection-start-line="54" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
-          <folding>
-            <element signature="e#49#66#0" expanded="true" />
-            <element signature="e#287#588#0" expanded="false" />
-            <element signature="e#590#638#0" expanded="false" />
-            <element signature="e#781#835#0" expanded="false" />
-            <element signature="e#837#891#0" expanded="false" />
-            <element signature="e#893#947#0" expanded="false" />
-            <element signature="e#1092#1170#0" expanded="false" />
-            <element signature="e#1172#1237#0" expanded="false" />
-            <element signature="e#1239#1297#0" expanded="false" />
-            <element signature="e#1299#1357#0" expanded="false" />
-            <element signature="e#1359#1383#0" expanded="false" />
-            <element signature="e#1385#1465#0" expanded="false" />
-            <marker date="1495896761296" expanded="false" signature="671:690" ph="{...}" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -786,21 +767,79 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/include/Bullet.hpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" column="11" lean-forward="false" selection-start-line="16" selection-start-column="11" selection-end-line="16" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AEntity.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="368">
+          <caret line="42" column="98" lean-forward="false" selection-start-line="42" selection-start-column="98" selection-end-line="42" selection-end-column="98" />
+          <folding>
+            <element signature="e#49#66#0" expanded="true" />
+            <element signature="e#618#919#0" expanded="false" />
+            <element signature="e#921#969#0" expanded="false" />
+            <element signature="e#1236#1290#0" expanded="false" />
+            <element signature="e#1292#1346#0" expanded="false" />
+            <element signature="e#1348#1402#0" expanded="false" />
+            <element signature="e#1547#1625#0" expanded="false" />
+            <element signature="e#1627#1692#0" expanded="false" />
+            <element signature="e#1694#1752#0" expanded="false" />
+            <element signature="e#1754#1812#0" expanded="false" />
+            <element signature="e#1814#1838#0" expanded="false" />
+            <element signature="e#1840#1920#0" expanded="false" />
+            <marker date="1495898222603" expanded="false" signature="1002:1021" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/include/AEntity.hpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="155">
+          <caret line="31" column="35" lean-forward="false" selection-start-line="31" selection-start-column="35" selection-end-line="31" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/include/EnimyLite.hpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="23" selection-end-column="2" />
+          <folding>
+            <element signature="e#95#117#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/include/EnimyWide.hpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="19" column="14" lean-forward="false" selection-start-line="19" selection-start-column="5" selection-end-line="19" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/EnimyLite.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="201">
-          <caret line="17" column="28" lean-forward="false" selection-start-line="17" selection-start-column="28" selection-end-line="17" selection-end-column="28" />
+        <state relative-caret-position="66">
+          <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="35" selection-end-column="1" />
           <folding>
             <element signature="e#49#67#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/include/Bullet.hpp">
+    <entry file="file://$PROJECT_DIR$/src/EnimyWide.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="11" lean-forward="false" selection-start-line="16" selection-start-column="11" selection-end-line="16" selection-end-column="11" />
-          <folding />
+        <state relative-caret-position="81">
+          <caret line="8" column="67" lean-forward="false" selection-start-line="8" selection-start-column="67" selection-end-line="8" selection-end-column="67" />
+          <folding>
+            <element signature="e#49#84#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

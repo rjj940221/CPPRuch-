@@ -5,9 +5,14 @@
 #include <math.h>
 #include "../include/AEntity.hpp"
 
-AEntity::AEntity() : lives(1), damage(1), symbol('-') {}
+AEntity::AEntity() : width(1), lives(1), damage(1), xLoc(0), yLoc(0), xVolocity(0), yVolocity(0), symbol('-') {}
 
-AEntity::AEntity(char symbol) : lives(1), damage(1), symbol(symbol) {
+AEntity::AEntity(char symbol) : width(1), lives(1), damage(1), xLoc(0), yLoc(0), xVolocity(0), yVolocity(0),
+                                symbol(symbol) {
+}
+
+AEntity::AEntity(char symbol, int width) : width(width), lives(1), damage(1), xLoc(0), yLoc(0), xVolocity(0),
+                                           yVolocity(0), symbol(symbol) {
 }
 
 AEntity::AEntity(AEntity const &ae) {
@@ -34,8 +39,8 @@ int AEntity::getDamage() const {
 	return damage;
 }
 
-AEntity::AEntity(char symbol, int lives) : lives(lives), damage(1), symbol(symbol) {
-
+AEntity::AEntity(char symbol, int lives, int width) : width(width), lives(lives), damage(1), xLoc(0), yLoc(0),
+                                                      xVolocity(0), yVolocity(0), symbol(symbol) {
 }
 
 int AEntity::takeDamage() {
@@ -81,4 +86,8 @@ AEntity::~AEntity() {
 
 unsigned int AEntity::getSymbol() const {
 	return (const unsigned int) symbol;
+}
+
+int AEntity::getWidth() const {
+	return width;
 }

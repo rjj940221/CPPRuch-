@@ -6,6 +6,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/rush00_rojones_.dir/src/WallLight.cpp.o"
   "CMakeFiles/rush00_rojones_.dir/src/Bullet.cpp.o"
   "CMakeFiles/rush00_rojones_.dir/src/Ship.cpp.o"
+  "CMakeFiles/rush00_rojones_.dir/src/EnimyWide.cpp.o"
   "rush00_rojones_.pdb"
   "rush00_rojones_"
 )

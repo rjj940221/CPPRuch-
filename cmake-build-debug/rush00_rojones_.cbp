@@ -91,6 +91,9 @@
 		<Unit filename="/nfs/zfs-student-6/users/rojones/year2/CPP_Bootcamp/rush00(rojones)/include/EnimyLite.hpp">
 			<Option target="rush00_rojones_"/>
 		</Unit>
+		<Unit filename="/nfs/zfs-student-6/users/rojones/year2/CPP_Bootcamp/rush00(rojones)/include/EnimyWide.hpp">
+			<Option target="rush00_rojones_"/>
+		</Unit>
 		<Unit filename="/nfs/zfs-student-6/users/rojones/year2/CPP_Bootcamp/rush00(rojones)/include/Player.hpp">
 			<Option target="rush00_rojones_"/>
 		</Unit>
@@ -110,6 +113,9 @@
 			<Option target="rush00_rojones_"/>
 		</Unit>
 		<Unit filename="/nfs/zfs-student-6/users/rojones/year2/CPP_Bootcamp/rush00(rojones)/src/EnimyLite.cpp">
+			<Option target="rush00_rojones_"/>
+		</Unit>
+		<Unit filename="/nfs/zfs-student-6/users/rojones/year2/CPP_Bootcamp/rush00(rojones)/src/EnimyWide.cpp">
 			<Option target="rush00_rojones_"/>
 		</Unit>
 		<Unit filename="/nfs/zfs-student-6/users/rojones/year2/CPP_Bootcamp/rush00(rojones)/src/Player.cpp">

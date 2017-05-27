@@ -204,6 +204,33 @@ src/EnimyLite.cpp.s:
 	$(MAKE) -f CMakeFiles/rush00_rojones_.dir/build.make CMakeFiles/rush00_rojones_.dir/src/EnimyLite.cpp.s
 .PHONY : src/EnimyLite.cpp.s
 
+src/EnimyWide.o: src/EnimyWide.cpp.o
+
+.PHONY : src/EnimyWide.o
+
+# target to build an object file
+src/EnimyWide.cpp.o:
+	$(MAKE) -f CMakeFiles/rush00_rojones_.dir/build.make CMakeFiles/rush00_rojones_.dir/src/EnimyWide.cpp.o
+.PHONY : src/EnimyWide.cpp.o
+
+src/EnimyWide.i: src/EnimyWide.cpp.i
+
+.PHONY : src/EnimyWide.i
+
+# target to preprocess a source file
+src/EnimyWide.cpp.i:
+	$(MAKE) -f CMakeFiles/rush00_rojones_.dir/build.make CMakeFiles/rush00_rojones_.dir/src/EnimyWide.cpp.i
+.PHONY : src/EnimyWide.cpp.i
+
+src/EnimyWide.s: src/EnimyWide.cpp.s
+
+.PHONY : src/EnimyWide.s
+
+# target to generate assembly for a file
+src/EnimyWide.cpp.s:
+	$(MAKE) -f CMakeFiles/rush00_rojones_.dir/build.make CMakeFiles/rush00_rojones_.dir/src/EnimyWide.cpp.s
+.PHONY : src/EnimyWide.cpp.s
+
 src/Player.o: src/Player.cpp.o
 
 .PHONY : src/Player.o
@@ -330,6 +357,9 @@ help:
 	@echo "... src/EnimyLite.o"
 	@echo "... src/EnimyLite.i"
 	@echo "... src/EnimyLite.s"
+	@echo "... src/EnimyWide.o"
+	@echo "... src/EnimyWide.i"
+	@echo "... src/EnimyWide.s"
 	@echo "... src/Player.o"
 	@echo "... src/Player.i"
 	@echo "... src/Player.s"

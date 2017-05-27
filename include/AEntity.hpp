@@ -9,6 +9,7 @@
 
 class AEntity {
 protected:
+	int width;
 	int lives;
 	int damage;
 	float xLoc;
@@ -19,6 +20,8 @@ protected:
 public:
 	AEntity();
 
+	int getWidth() const;
+
 	/*For Canonical Purposes.*/
 	AEntity(AEntity const &ae);
 
@@ -26,7 +29,9 @@ public:
 
 	AEntity(char symbol);
 
-	AEntity(char symbol, int lives);
+	AEntity(char symbol, int width);
+
+	AEntity(char symbol, int lives, int width);
 	//AEntity(int xVolocity, int yVolocity);
 	int getXLoc() const;
 
