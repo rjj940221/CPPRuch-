@@ -9,7 +9,7 @@
 EnimyLite::EnimyLite(int locx, int locy) : AEntity('*', 1) {
 	this->yLoc = locy;
 	this->xLoc = locx;
-	this->yVolocity = 1;
+	this->yVolocity = 0.2;
 	this->xVolocity = 0;
 }
 

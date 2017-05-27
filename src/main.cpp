@@ -95,29 +95,33 @@ void update() {
 		}
 	}
 	if (g_count < MAXOBJ && g_loop) {
-		g_obj[g_count++] = (AEntity *) new EnimyLite(/*(rand() % MAPX)*/ g_player->getXLoc(), 0);
+		g_obj[g_count++] = (AEntity *) new EnimyLite((rand() % MAPX), 0);
 	}
 	g_actions = 0;
 }
 
 void gameLoop() {
 	time_t start;
-	time_t last;
 	time_t now;
 	g_loop = true;
-	time(&last);
 	time(&start);
 	time(&now);
+	clock_t intavel = (clock_t) (((float) 1 / 60) * 1000);
+	clock_t cycleSt = clock();
+	float cycletime = 0;
 	while (g_loop) {
-		update();
-		for (int i = 0; i < 10000000; ++i) {
-			i += 0;
+		cycletime += ((float) (clock() - cycleSt) / CLOCKS_PER_SEC) * 1000;
+		while (cycletime - intavel > 0) {
+			update();
+			draw();
+			cycletime -= intavel;
 		}
-		draw();
+		cycleSt = clock();
 		getKey();
 		if (g_loop) {
 			time(&now);
-			mvwprintw(g_scr, 1, 1, "score: %d, lives: %d, time : %f", g_player->getScore(), g_player->getLives(), difftime(now, start));
+			mvwprintw(g_scr, 1, 1, "score: %d, lives: %d, sec : %f", g_player->getScore(), g_player->getLives(),
+			          difftime(now, start));
 		}
 		wrefresh(g_win);
 		wrefresh(g_scr);
@@ -169,24 +173,15 @@ int main() {
 	std::cout << g_count << ":" << foo << std::endl;
 }
 
-/*
-int main() {
-	time_t timer1;
-	time_t timer2;
-	//struct tm y2k = {0};
-	double seconds;
 
-	//y2k.tm_hour = 0;   y2k.tm_min = 0; y2k.tm_sec = 0;
-	//y2k.tm_year = 100; y2k.tm_mon = 0; y2k.tm_mday = 1;
-
-	time(&timer1);  */
-/* get current time; same as: timer = time(NULL)  *//*
-
-	sleep(1);
-	time(&timer2);
-	seconds = difftime(timer2, timer1);
-	std::cout << "diff: " << timer2 - timer1 << std::endl;
-	printf("%.f \n", seconds);
-
+/*int main() {
+	float intavel = (((float) 1 / 60) * 1000);
+	clock_t cycleSt = clock();
+	//sleep(1);
+	for (long int i = 0; i < 100000000; ++i) {
+		i += 0;
+	}
+	float cycletime = ((float) (clock() - cycleSt) / CLOCKS_PER_SEC) * 1000;
+	std::cout << "cycle; " << cycletime << " INTER " << intavel << std::endl;
 	return 0;
 }*/

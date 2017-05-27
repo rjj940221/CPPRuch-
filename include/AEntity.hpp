@@ -9,10 +9,10 @@ class AEntity {
 protected:
 	int lives;
 	int damage;
-	int xLoc;
-	int yLoc;
-	int xVolocity;
-	int yVolocity;
+	float xLoc;
+	float yLoc;
+	float xVolocity;
+	float yVolocity;
 	char symbol;
 public:
 	AEntity();
@@ -35,7 +35,7 @@ public:
 
 	virtual ~AEntity();
 
-	int getXVolocity() const;
+	float getXVolocity() const;
 
 	int getLives() const;
 
@@ -45,7 +45,7 @@ public:
 
 	void setXVolocity(int xVolocity);
 
-	int getYVolocity() const;
+	float getYVolocity() const;
 
 	void setYVolocity(int yVolocity) {
 		AEntity::yVolocity = yVolocity;
