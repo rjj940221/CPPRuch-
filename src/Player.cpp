@@ -27,6 +27,11 @@ int Player::getScore() const {
 	return score;
 }
 
+void Player::addToScore(int amount)
+{
+	score += amount;
+}
+
 void Player::moveLeft() {
 	xLoc--;
 	xLoc = (xLoc < 0) ? 0 : xLoc;

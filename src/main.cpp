@@ -3,6 +3,8 @@
 #include <sstream>
 #include <zconf.h>
 #include <unistd.h>
+#include <cstdlib>
+#include <math.h>
 #include "../include/AEntity.hpp"
 #include "../include/Player.hpp"
 #include "../include/game.h"
@@ -120,6 +122,7 @@ void gameLoop() {
 		getKey();
 		if (g_loop) {
 			time(&now);
+			g_player->addToScore((fmod(difftime(now, start), 20) == 0) ? 1 : 0);
 			mvwprintw(g_scr, 1, 1, "score: %d, lives: %d, sec : %f", g_player->getScore(), g_player->getLives(),
 			          difftime(now, start));
 		}
@@ -127,7 +130,7 @@ void gameLoop() {
 		wrefresh(g_scr);
 
 		//Wait: usleep uses microseconds 1ms = 1000us; thus 16 * 1000 = 16ms
-		usleep(16 * 1000);
+		//usleep(16 * 1000);
 	}
 }
 
