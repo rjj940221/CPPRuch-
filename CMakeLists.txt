@@ -1,0 +1,10 @@
+cmake_minimum_required(VERSION 3.7)
+project(rush00_rojones_)
+
+set(CMAKE_CXX_STANDARD 98)
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall -Werror -Wextra -g3 ")
+find_package(Curses REQUIRED)
+include_directories(${CURSES_INCLUDE_DIR})
+set(SOURCE_FILES src/main.cpp include/AEntity.hpp src/Player.cpp include/Player.hpp src/AEntity.cpp src/EnimyLite.cpp include/EnimyLite.hpp src/WallLight.cpp include/WallLight.hpp include/game.h src/Bullet.cpp include/Bullet.hpp src/Ship.cpp include/Ship.hpp)
+add_executable(rush00_rojones_ ${SOURCE_FILES})
+target_link_libraries(rush00_rojones_ ${CURSES_LIBRARIES})
