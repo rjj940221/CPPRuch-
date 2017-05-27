@@ -9,12 +9,16 @@
 #include "AEntity.hpp"
 #include "Ship.hpp"
 
-class Player : public Ship {
+class Player : public AShip {
 private:
 
 	int score;
 public:
 	Player();
+
+	Player(Player const & plr);
+
+	Player operator=(Player const & rhs);
 
 	int getScore() const;
 
@@ -27,6 +31,8 @@ public:
 	void moveDown(int bound);
 
 	AEntity *shoot();
+
+	~Player(void);
 };
 
 

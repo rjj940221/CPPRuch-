@@ -17,6 +17,10 @@ protected:
 public:
 	AEntity();
 
+	/*For Canonical Purposes.*/
+	AEntity(AEntity const & ae);
+	AEntity operator=(AEntity const &rhs);
+
 	AEntity(char symbol);
 
 	AEntity(char symbol, int lives);

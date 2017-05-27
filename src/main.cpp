@@ -2,6 +2,7 @@
 #include <ncurses.h>
 #include <sstream>
 #include <zconf.h>
+#include <unistd.h>
 #include "../include/AEntity.hpp"
 #include "../include/Player.hpp"
 #include "../include/game.h"
@@ -124,6 +125,9 @@ void gameLoop() {
 		}
 		wrefresh(g_win);
 		wrefresh(g_scr);
+
+		//Wait: usleep uses microseconds 1ms = 1000us; thus 16 * 1000 = 16ms
+		usleep(16 * 1000);
 	}
 }
 

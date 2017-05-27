@@ -8,6 +8,20 @@
 
 Player::Player() : AEntity('^', 3), score(0) {}
 
+Player::Player(Player const & plr) : AEntity('^', 3), score(0)
+{
+	*this = plr;
+}
+
+Player Player::operator=(Player const & rhs)
+{
+	this->score = rhs.getScore();
+	return (*this);
+}
+
+Player::~Player(void)
+{
+}
 
 int Player::getScore() const {
 	return score;

@@ -8,7 +8,7 @@
 
 #include "AEntity.hpp"
 
-class Ship : public virtual AEntity{
+class AShip : public virtual AEntity{
 public:
 	virtual AEntity *shoot() = 0;
 };

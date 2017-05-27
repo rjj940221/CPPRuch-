@@ -16,3 +16,20 @@ EnimyLite::EnimyLite(int locx, int locy) : AEntity('*', 1) {
 AEntity *EnimyLite::shoot() {
 	return new Bullet(0, -1, this->xLoc, this->yLoc);
 }
+
+EnimyLite::EnimyLite(EnimyLite const & el) : AEntity('*', 1) {
+	*this = el;
+}
+
+EnimyLite EnimyLite::operator=(EnimyLite const & rhs)
+{
+	this->yLoc = rhs.getYLoc();
+	this->xLoc = rhs.getXLoc();
+	this->yVolocity = rhs.getYVolocity();
+	this->xVolocity = rhs.getXVolocity();
+	return (*this);
+}
+
+EnimyLite::~EnimyLite(void)
+{
+}
