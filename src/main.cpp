@@ -10,10 +10,11 @@
 #include "../include/game.h"
 #include "../include/EnimyLite.hpp"
 #include "../include/EnimyWide.hpp"
+#include "../include/WallLight.hpp"
 
 #define MAPX 64
 #define MAPY 27
-#define MAXOBJ 150
+#define MAXOBJ 300
 #define MAXSHIP 20
 #define SPAWNCHANCE 15
 
@@ -23,6 +24,8 @@ AShip *g_ship[MAXSHIP];
 Player *g_player = new Player;
 int g_count = 0;
 int g_shipCount = 0;
+int g_leftwall = 0;
+int g_rightWall = MAPX - 1;
 
 void draw() {
 	wclear(g_win);
@@ -30,12 +33,11 @@ void draw() {
 	box(g_scr, 0, 0);
 	for (int x = 0; x < g_count; ++x) {
 		int width = g_obj[x]->getWidth();
-		if (width > 1){
+		if (width > 1) {
 			for (int i = 0; i < width; ++i) {
 				mvwaddch(g_win, g_obj[x]->getYLoc() + 1, g_obj[x]->getXLoc() + 1 + i, g_obj[x]->getSymbol());
 			}
-		}
-		else {
+		} else {
 			mvwaddch(g_win, g_obj[x]->getYLoc() + 1, g_obj[x]->getXLoc() + 1, g_obj[x]->getSymbol());
 		}
 	}
@@ -97,17 +99,36 @@ void removeObj(int index) {
 	g_count--;
 }
 
-void update() {
-	for (int i = 0; i < g_shipCount; ++i) {
-		int chance = g_ship[i]->getShootChance();
-		if (g_count < MAXOBJ && chance > 0&& (rand() % chance) == 1)
-			g_obj[g_count++] = g_ship[i]->shoot();
-	}
-	for (int i = 0; i < g_count; ++i) {
-		if (!g_obj[i]->update(MAPX, MAPY)) {
-			removeObj(i);
+void generateWall() {
+	if (g_count + 2 < MAXOBJ) {
+		int randl = rand() % 3;
+		int randr = rand() % 3;
+		switch (randl) {
+			case 0:
+				g_leftwall = (g_leftwall - 1 < 0) ? 0 : g_leftwall - 1;
+				break;
+			case 2:
+				g_leftwall++;
+				break;
+			default:
+				break;
+		}
+		switch (randr) {
+			case 0:
+				g_rightWall = (g_rightWall - 1 < g_leftwall + 20) ? g_rightWall : g_leftwall - 1;
+				break;
+			case 2:
+				g_rightWall = (g_rightWall + 1 < MAPX) ? g_rightWall + 1 : g_rightWall;
+				break;
+			default:
+				break;
 		}
 	}
+	g_obj[g_count++] = (AEntity *) new WallLight(g_rightWall, 0, 0, 1);
+	g_obj[g_count++] = (AEntity *) new WallLight(g_leftwall, 0, 0, 1);
+}
+
+void colisionDetection() {
 	for (int i = 0; i < g_count - 1; ++i) {
 		for (int j = i + 1; j < g_count; ++j) {
 			if (g_obj[i]->getYLoc() == g_obj[j]->getYLoc() && g_obj[i]->getXLoc() == g_obj[j]->getXLoc()) {
@@ -124,11 +145,12 @@ void update() {
 					j = (j - 1) < 0 ? 0 : j - 1;
 				}
 			}
-			if (g_obj[i]->getWidth() > 1){
+			if (g_obj[i]->getWidth() > 1) {
 				int width = g_obj[i]->getWidth() + 1;
 				for (int k = 1; k < width; ++k) {
 					for (int l = i + 1; l < g_count; ++l) {
-						if (g_obj[i]->getYLoc() == g_obj[l]->getYLoc() && g_obj[i]->getXLoc() + k == g_obj[l]->getXLoc()) {
+						if (g_obj[i]->getYLoc() == g_obj[l]->getYLoc() &&
+						    g_obj[i]->getXLoc() + k == g_obj[l]->getXLoc()) {
 							if (g_obj[i]->takeDamage() <= 0) {
 								removeObj(i);
 								if (i == 0) {
@@ -147,13 +169,31 @@ void update() {
 			}
 		}
 	}
-	//srand((unsigned int) time(NULL));
-	if (g_count < MAXOBJ && g_shipCount < MAXSHIP && g_loop && (rand() % SPAWNCHANCE + 1) == 1) {
-		if(rand() % 4 == 1){
-			g_obj[g_count++] = g_ship[g_shipCount++] = new EnimyWide((rand() % MAPX - 3), 0);
-		}else
-			g_obj[g_count++] = g_ship[g_shipCount++] = new EnimyLite((rand() % MAPX), 0);
+}
+
+void update() {
+	for (int i = 0; i < g_shipCount; ++i) {
+		int chance = g_ship[i]->getShootChance();
+		if (g_count < MAXOBJ && chance > 0 && (rand() % chance) == 1)
+			g_obj[g_count++] = g_ship[i]->shoot();
 	}
+	for (int i = 0; i < g_count; ++i) {
+		if (!g_obj[i]->update(MAPX, MAPY)) {
+			removeObj(i);
+		}
+	}
+	colisionDetection();
+	//srand((unsigned int) time(NULL));
+	generateWall();
+	if (g_count < MAXOBJ && g_shipCount < MAXSHIP && g_loop && (rand() % SPAWNCHANCE + 1) == 1) {
+		if (rand() % 4 == 1) {
+			g_obj[g_count++] = g_ship[g_shipCount++] = new EnimyWide(
+					(rand() % (MAPX - (3 + (g_rightWall - g_leftwall))) + g_leftwall), 0);
+		} else
+			g_obj[g_count++] = g_ship[g_shipCount++] = new EnimyLite(
+					(rand() % (MAPX - (g_rightWall - g_leftwall)) + g_leftwall), 0);
+	}
+
 	g_actions = 0;
 }
 
