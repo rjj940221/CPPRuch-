@@ -37,6 +37,8 @@ ncurses.h
 -
 
 /nfs/zfs-student-6/users/rojones/year2/CPP_Bootcamp/rush00(rojones)/src/AEntity.cpp
+math.h
+-
 ../include/AEntity.hpp
 /nfs/zfs-student-6/users/rojones/year2/CPP_Bootcamp/rush00(rojones)/include/AEntity.hpp
 

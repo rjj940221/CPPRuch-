@@ -2,6 +2,7 @@
 // Created by Robert JONES on 2017/05/26.
 //
 
+#include <math.h>
 #include "../include/AEntity.hpp"
 
 AEntity::AEntity() : lives(1), damage(1), symbol('-') {}
@@ -28,11 +29,11 @@ int AEntity::takeDamage() {
 }
 
 int AEntity::getXLoc() const {
-	return xLoc;
+	return (int) (xLoc);
 }
 
 int AEntity::getYLoc() const {
-	return yLoc;
+	return (int) (yLoc);
 }
 
 bool AEntity::update(int mx, int my) {
@@ -51,11 +52,11 @@ void AEntity::setLocation(int x, int y) {
 	yLoc = y;
 }
 
-int AEntity::getYVolocity() const {
+float AEntity::getYVolocity() const {
 	return yVolocity;
 }
 
-int AEntity::getXVolocity() const {
+float AEntity::getXVolocity() const {
 	return xVolocity;
 }
 
