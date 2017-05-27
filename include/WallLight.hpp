@@ -9,7 +9,11 @@
 #include "AEntity.hpp"
 
 class WallLight : AEntity {
-
+	public:
+		WallLight(void);
+		WallLight(WallLight const & wl);
+		WallLight operator=(WallLight const & wl);
+		~WallLight(void);
 };
 
 

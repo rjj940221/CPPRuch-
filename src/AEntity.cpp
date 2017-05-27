@@ -6,8 +6,26 @@
 
 AEntity::AEntity() : lives(1), damage(1), symbol('-') {}
 
-AEntity::AEntity(char symbol) : lives(1), damage(1), symbol(symbol) {
+AEntity::AEntity(char symbol) : lives(1), damage(1), symbol(symbol) 
+{
+}
 
+AEntity::AEntity(AEntity const & ae)
+{
+	*this = ae;
+}
+
+AEntity AEntity::operator=(AEntity const & rhs)
+{
+	this->lives = rhs.getLives();
+	this->damage = rhs.getDamage();
+	this->xLoc = rhs.getXLoc();
+	this->yLoc = rhs.getYLoc();
+	this->xVolocity = rhs.getXVolocity();
+	this->yVolocity = rhs.getYVolocity();
+	this->symbol = rhs.getSymbol();
+
+	return (*this);
 }
 
 int AEntity::getLives() const {

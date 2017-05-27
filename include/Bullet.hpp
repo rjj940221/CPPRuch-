@@ -9,8 +9,13 @@
 #include "AEntity.hpp"
 
 class Bullet : public AEntity {
+private:
+	Bullet(void);
 public:
 	Bullet(int volX, int volY, int locX, int locY);
+	Bullet(Bullet const & b);
+	Bullet operator=(Bullet const & rhs);
+	~Bullet(void);
 };
 
 
