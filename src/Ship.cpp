@@ -3,3 +3,9 @@
 //
 
 #include "../include/Ship.hpp"
+
+int AShip::getShootChance() const {
+	return ShootChance;
+}
+
+AShip::AShip(int ShootChance) : ShootChance(ShootChance) {}

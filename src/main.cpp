@@ -13,12 +13,15 @@
 #define MAPX 64
 #define MAPY 27
 #define MAXOBJ 150
-
+#define MAXSHIP 20
+#define SPAWNCHANCE 15
 
 std::string foo;
 AEntity *g_obj[MAXOBJ];
+AShip *g_ship[MAXSHIP];
 Player *g_player = new Player;
 int g_count = 0;
+int g_shipCount = 0;
 
 void draw() {
 	wclear(g_win);
@@ -67,12 +70,30 @@ void removeObj(int index) {
 	for (int j = index; j < g_count - 1; ++j) {
 		g_obj[j] = g_obj[j + 1];
 	}
+	int i = 0;
+	while (i < g_shipCount) {
+		if (g_ship[i] == temp)
+			break;
+		i++;
+	}
+	for (int k = i; k < g_shipCount - 1; ++k) {
+		g_ship[k] = g_ship[k + 1];
+	}
 	delete (temp);
 	g_obj[g_count] = NULL;
+	if (i != g_shipCount) {
+		g_ship[g_shipCount] = NULL;
+		g_shipCount--;
+	}
 	g_count--;
 }
 
 void update() {
+	for (int i = 0; i < g_shipCount; ++i) {
+		int chance = g_ship[i]->getShootChance();
+		if (g_count < MAXOBJ && chance > 0&& (rand() % chance) == 1)
+			g_obj[g_count++] = g_ship[i]->shoot();
+	}
 	for (int i = 0; i < g_count; ++i) {
 		if (!g_obj[i]->update(MAPX, MAPY)) {
 			removeObj(i);
@@ -96,8 +117,9 @@ void update() {
 			}
 		}
 	}
-	if (g_count < MAXOBJ && g_loop) {
-		g_obj[g_count++] = (AEntity *) new EnimyLite((rand() % MAPX), 0);
+	//srand((unsigned int) time(NULL));
+	if (g_count < MAXOBJ && g_shipCount < MAXSHIP && g_loop && (rand() % SPAWNCHANCE + 1) == 1) {
+		g_obj[g_count++] = g_ship[g_shipCount++] = new EnimyLite((rand() % MAPX), 0);
 	}
 	g_actions = 0;
 }
@@ -128,9 +150,6 @@ void gameLoop() {
 		}
 		wrefresh(g_win);
 		wrefresh(g_scr);
-
-		//Wait: usleep uses microseconds 1ms = 1000us; thus 16 * 1000 = 16ms
-		//usleep(16 * 1000);
 	}
 }
 
@@ -138,8 +157,12 @@ void initObj() {
 	for (int i = 0; i < MAXOBJ; ++i) {
 		g_obj[i] = NULL;
 	}
+	for (int i = 0; i < MAXSHIP; ++i) {
+		g_ship[i] = NULL;
+	}
 	g_player->setLocation(MAPX / 2, MAPY - 1);
 	g_obj[g_count++] = g_player;
+	g_ship[g_shipCount++] = g_player;
 }
 
 void initWindow() {
@@ -175,16 +198,3 @@ int main() {
 	endwin();
 	std::cout << g_count << ":" << foo << std::endl;
 }
-
-
-/*int main() {
-	float intavel = (((float) 1 / 60) * 1000);
-	clock_t cycleSt = clock();
-	//sleep(1);
-	for (long int i = 0; i < 100000000; ++i) {
-		i += 0;
-	}
-	float cycletime = ((float) (clock() - cycleSt) / CLOCKS_PER_SEC) * 1000;
-	std::cout << "cycle; " << cycletime << " INTER " << intavel << std::endl;
-	return 0;
-}*/

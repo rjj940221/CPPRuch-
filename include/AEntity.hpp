@@ -5,6 +5,8 @@
 #ifndef ROJONES_IENTITY_HPP
 #define ROJONES_IENTITY_HPP
 
+#include <string>
+
 class AEntity {
 protected:
 	int lives;
@@ -18,7 +20,8 @@ public:
 	AEntity();
 
 	/*For Canonical Purposes.*/
-	AEntity(AEntity const & ae);
+	AEntity(AEntity const &ae);
+
 	AEntity operator=(AEntity const &rhs);
 
 	AEntity(char symbol);

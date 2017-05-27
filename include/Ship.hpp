@@ -9,8 +9,14 @@
 #include "AEntity.hpp"
 
 class AShip : public virtual AEntity{
+private:
+	int ShootChance;
 public:
+	AShip(int ShootChance);
+
 	virtual AEntity *shoot() = 0;
+
+	int getShootChance() const;
 };
 
 

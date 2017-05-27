@@ -13,6 +13,7 @@ class EnimyLite : public AShip {
 private:
 	EnimyLite(void);
 
+
 public:
 	EnimyLite(int locx, int locy);
 	AEntity *shoot();

@@ -6,21 +6,18 @@
 #include "../include/Player.hpp"
 #include "../include/Bullet.hpp"
 
-Player::Player() : AEntity('^', 3), score(0) {}
+Player::Player() : AEntity('^', 3), AShip(0), score(0) {}
 
-Player::Player(Player const & plr) : AEntity('^', 3), score(0)
-{
+Player::Player(Player const &plr) : AEntity('^', 3), AShip(0), score(0) {
 	*this = plr;
 }
 
-Player Player::operator=(Player const & rhs)
-{
+Player Player::operator=(Player const &rhs) {
 	this->score = rhs.getScore();
 	return (*this);
 }
 
-Player::~Player(void)
-{
+Player::~Player(void) {
 }
 
 int Player::getScore() const {
