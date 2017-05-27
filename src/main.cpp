@@ -11,11 +11,7 @@
 #define MAPY 27
 #define MAXOBJ 150
 
-/*WINDOW *g_win;
-WINDOW *g_scr;
-int g_wx;
-int g_wy;
-bool g_loop;*/
+
 std::string foo;
 AEntity *g_obj[MAXOBJ];
 Player *g_player = new Player;
@@ -71,7 +67,6 @@ void removeObj(int index) {
 	delete (temp);
 	g_obj[g_count] = NULL;
 	g_count--;
-	//g_obj[g_count--] = NULL;
 }
 
 void update() {
@@ -105,13 +100,14 @@ void update() {
 }
 
 void gameLoop() {
+	time_t start;
 	time_t last;
-	//time_t now;
+	time_t now;
 	g_loop = true;
 	time(&last);
-	/*time(&now);*/
-	while (g_loop) { // draw to our windows
-
+	time(&start);
+	time(&now);
+	while (g_loop) {
 		update();
 		for (int i = 0; i < 10000000; ++i) {
 			i += 0;
@@ -119,7 +115,8 @@ void gameLoop() {
 		draw();
 		getKey();
 		if (g_loop) {
-			mvwprintw(g_scr, 1, 1, "score: %d, lives: %d", g_player->getScore(), g_player->getLives());
+			time(&now);
+			mvwprintw(g_scr, 1, 1, "score: %d, lives: %d, time : %f", g_player->getScore(), g_player->getLives(), difftime(now, start));
 		}
 		wrefresh(g_win);
 		wrefresh(g_scr);
