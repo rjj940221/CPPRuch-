@@ -18,7 +18,7 @@ AEntity *EnimyLite::shoot() {
 	return new Bullet(0, 1, this->xLoc, this->yLoc);
 }
 
-EnimyLite::EnimyLite(EnimyLite const & el) : AEntity('*', 1), AShip(20) {
+EnimyLite::EnimyLite(EnimyLite const & el) : AEntity('*', 1), AShip(50) {
 	*this = el;
 }
 

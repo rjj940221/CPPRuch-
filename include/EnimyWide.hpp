@@ -6,6 +6,9 @@
 #define ENIMYWIDE_HPP
 
 
+#include "AEntity.hpp"
+#include "Ship.hpp"
+
 class EnimyWide : public AShip {
 private:
 	EnimyWide(void);
