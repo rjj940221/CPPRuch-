@@ -21,6 +21,8 @@ public:
 	Player operator=(Player const & rhs);
 
 	int getScore() const;
+	
+	void addToScore(int amount);
 
 	void moveLeft();
 
