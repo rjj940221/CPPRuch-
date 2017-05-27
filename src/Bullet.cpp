@@ -4,7 +4,7 @@
 
 #include "../include/Bullet.hpp"
 
-Bullet::Bullet(int volX, int volY, int locX, int locY) : AEntity('|') {
+Bullet::Bullet(float volX, float volY, float locX, float locY) : AEntity('|') {
 	this->yVolocity = volY;
 	this->xVolocity = volX;
 	this->xLoc = locX + volX;
@@ -18,7 +18,7 @@ Bullet::Bullet(Bullet const & b) : AEntity('|')
 
 Bullet Bullet::operator=(Bullet const & rhs)
 {
-	this->symbol = rhs.getSymbol();
+	this->symbol = (char) rhs.getSymbol();
 	this->yVolocity = rhs.getYVolocity();
 	this->xVolocity = rhs.getXVolocity();
 	this->xLoc = rhs.getXLoc();

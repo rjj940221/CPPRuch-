@@ -12,7 +12,7 @@ class Bullet : public AEntity {
 private:
 	Bullet(void);
 public:
-	Bullet(int volX, int volY, int locX, int locY);
+	Bullet(float volX, float volY, float locX, float locY);
 	Bullet(Bullet const & b);
 	Bullet operator=(Bullet const & rhs);
 	~Bullet(void);

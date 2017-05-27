@@ -6,18 +6,19 @@
 #include "../include/EnimyLite.hpp"
 #include "../include/Bullet.hpp"
 
-EnimyLite::EnimyLite(int locx, int locy) : AEntity('*', 1) {
+EnimyLite::EnimyLite(int locx, int locy) : AEntity('*', 1), AShip(50) {
 	this->yLoc = locy;
 	this->xLoc = locx;
 	this->yVolocity = 0.2;
 	this->xVolocity = 0;
+
 }
 
 AEntity *EnimyLite::shoot() {
-	return new Bullet(0, -1, this->xLoc, this->yLoc);
+	return new Bullet(0, 1, this->xLoc, this->yLoc);
 }
 
-EnimyLite::EnimyLite(EnimyLite const & el) : AEntity('*', 1) {
+EnimyLite::EnimyLite(EnimyLite const & el) : AEntity('*', 1), AShip(20) {
 	*this = el;
 }
 

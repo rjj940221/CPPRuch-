@@ -7,17 +7,14 @@
 
 AEntity::AEntity() : lives(1), damage(1), symbol('-') {}
 
-AEntity::AEntity(char symbol) : lives(1), damage(1), symbol(symbol) 
-{
+AEntity::AEntity(char symbol) : lives(1), damage(1), symbol(symbol) {
 }
 
-AEntity::AEntity(AEntity const & ae)
-{
+AEntity::AEntity(AEntity const &ae) {
 	*this = ae;
 }
 
-AEntity AEntity::operator=(AEntity const & rhs)
-{
+AEntity AEntity::operator=(AEntity const &rhs) {
 	this->lives = rhs.getLives();
 	this->damage = rhs.getDamage();
 	this->xLoc = rhs.getXLoc();
@@ -58,11 +55,11 @@ bool AEntity::update(int mx, int my) {
 	xLoc += xVolocity;
 	yLoc += yVolocity;
 
-	return (xLoc > -1 && xLoc < mx && yLoc > -1 && yLoc <my);
+	return (xLoc > -1 && xLoc < mx && yLoc > -1 && yLoc < my);
 }
 
 void AEntity::setXVolocity(int xVolocity) {
-		AEntity::xVolocity = xVolocity;
+	AEntity::xVolocity = xVolocity;
 }
 
 void AEntity::setLocation(int x, int y) {

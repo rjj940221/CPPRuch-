@@ -7,6 +7,8 @@
 #IncludeRegexTransform: 
 
 /nfs/zfs-student-6/users/rojones/year2/CPP_Bootcamp/rush00(rojones)/include/AEntity.hpp
+string
+-
 
 /nfs/zfs-student-6/users/rojones/year2/CPP_Bootcamp/rush00(rojones)/include/Bullet.hpp
 AEntity.hpp
@@ -78,6 +80,8 @@ ncurses.h
 sstream
 -
 zconf.h
+-
+unistd.h
 -
 ../include/AEntity.hpp
 /nfs/zfs-student-6/users/rojones/year2/CPP_Bootcamp/rush00(rojones)/include/AEntity.hpp
